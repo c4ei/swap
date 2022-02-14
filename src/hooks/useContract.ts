@@ -78,8 +78,9 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
       case ChainId.GÖRLI:
       case ChainId.ROPSTEN:
       case ChainId.RINKEBY:
-        address = '0x892E06883898003306ee7BECfd2620F1DcB4333C'
-        break
+      case ChainId.C4EI:
+          address = '0x892E06883898003306ee7BECfd2620F1DcB4333C'
+      break
     }
   }
   return useContract(address, ENS_ABI, withSignerIfPossible)

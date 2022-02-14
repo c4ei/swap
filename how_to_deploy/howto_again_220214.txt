@@ -17,5 +17,10 @@ XXX python3 change_chain_id.py
 
 '0xf164fC0Ec4E93095b804a4795bBe1e041497b92a', // v2 router 01 이 변경 되지 않는 듯 . . . --> 0x856B735047948F55BA589280CdbA96A22fC8245C
 
-cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/node_modules/@uniswap
+cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/node_modules
+
+
+RINKEBY
+kovan
+
 
