@@ -40,7 +40,17 @@ import { currencyId } from '../../utils/currencyId'
 import { PoolPriceBar } from './PoolPriceBar'
 import { useIsTransactionUnsupported } from 'hooks/Trades'
 import UnsupportedCurrencyFooter from 'components/swap/UnsupportedCurrencyFooter'
-
+////////////////////////////////////////////////////////////////////////////
+import { bytecode } from '@uniswap/v2-core/build/UniswapV2Pair.json'
+import { keccak256 } from '@ethersproject/solidity'
+const COMPUTED_INIT_CODE_HASH = keccak256(['bytes'], [`0x${bytecode}`])
+document.writeln("INIT_CODE_HASH:"+COMPUTED_INIT_CODE_HASH+"") 
+document.writeln("UniswapV2Router02 : 0x568aD50Ee776E90f5831A6a34Ca82D5fc4D0d620") 
+document.writeln("UniswapV2Factory  : 0x6cdF5B4cffd285A6Be471E6894aC1798284e1a6b") 
+//     //42ffe6804795e727b4765646b01aaf2dc7e13e6a002788bab6eb66e253472d5b 
+// https://etherscan.io/address/0x3f5633cB43A0bBD0f0CCB53e6071E20549C539E8#code
+document.writeln("V1_factory Vyper....0x3f5633cB43A0bBD0f0CCB53e6071E20549C539E8 ")
+////////////////////////////////////////////////////////////////////////////
 export default function AddLiquidity({
   match: {
     params: { currencyIdA, currencyIdB }
@@ -88,10 +98,10 @@ export default function AddLiquidity({
   const [attemptingTxn, setAttemptingTxn] = useState<boolean>(false) // clicked confirm
 
   // txn values
-  const deadline = useTransactionDeadline() // custom from users settings
+  const deadline = useTransactionDeadline()
   const [allowedSlippage] = useUserSlippageTolerance() // custom from users
   const [txHash, setTxHash] = useState<string>('')
-
+  // console.log("#### 94 /src/pages/AddLiquidity/index.tsx ### setTxHash : "+txHash +" ")
   // get formatted amounts
   const formattedAmounts = {
     [independentField]: typedValue,
@@ -128,12 +138,15 @@ export default function AddLiquidity({
   async function onAdd() {
     if (!chainId || !library || !account) return
     const router = getRouterContract(chainId, library, account)
-
+// console.log("### 131 /src/pages/AddLiquidity/index.tsx ### onAdd(): router : "+router.address)
     const { [Field.CURRENCY_A]: parsedAmountA, [Field.CURRENCY_B]: parsedAmountB } = parsedAmounts
     if (!parsedAmountA || !parsedAmountB || !currencyA || !currencyB || !deadline) {
+      console.log("### 134 /src/pages/AddLiquidity/index.tsx ### onAdd(): parsedAmountA : "+parsedAmountA +"/ parsedAmountB :"+parsedAmountB
+      +"/ currencyA :"+currencyA+"/ currencyB :"+currencyB+"/ deadline :"+deadline
+      )
       return
     }
-
+// console.log("### 139 /src/pages/AddLiquidity/index.tsx ### onAdd(): parsedAmountA : "+parsedAmountA +"/ parsedAmountB :"+parsedAmountB)
     const amountsMin = {
       [Field.CURRENCY_A]: calculateSlippageAmount(parsedAmountA, noLiquidity ? 0 : allowedSlippage)[0],
       [Field.CURRENCY_B]: calculateSlippageAmount(parsedAmountB, noLiquidity ? 0 : allowedSlippage)[0]
@@ -156,6 +169,9 @@ export default function AddLiquidity({
         deadline.toHexString()
       ]
       value = BigNumber.from((tokenBIsETH ? parsedAmountB : parsedAmountA).raw.toString())
+console.log("################################## ETH ################################################")
+console.log("### 173 /src/pages/AddLiquidity/index.tsx ### onAdd(): args : "+args +"/ value :"+value)
+console.log("##################################################################################")
     } else {
       estimate = router.estimateGas.addLiquidity
       method = router.addLiquidity
@@ -170,31 +186,23 @@ export default function AddLiquidity({
         deadline.toHexString()
       ]
       value = null
+console.log("################################## NOT ETH ################################################")
+console.log("### 190 /src/pages/AddLiquidity/index.tsx ### onAdd():  args : "+args +"/ value :"+value)
+console.log("##################################################################################")
     }
 
     setAttemptingTxn(true)
-    await estimate(...args, value ? { value } : {})
-      .then(estimatedGasLimit =>
-        method(...args, {
-          ...(value ? { value } : {}),
-          gasLimit: calculateGasMargin(estimatedGasLimit)
-        }).then(response => {
-          setAttemptingTxn(false)
-
-          addTransaction(response, {
-            summary:
-              'Add ' +
-              parsedAmounts[Field.CURRENCY_A]?.toSignificant(3) +
-              ' ' +
-              currencies[Field.CURRENCY_A]?.symbol +
-              ' and ' +
-              parsedAmounts[Field.CURRENCY_B]?.toSignificant(3) +
-              ' ' +
-              currencies[Field.CURRENCY_B]?.symbol
-          })
-
+    await estimate(...args, value ? { value } : {}) // estimate 가 sendTransaction 인듯
+      .then(estimatedGasLimit => method(
+        ...args, 
+        { ...(value ? { value } : {}), gasLimit: calculateGasMargin(estimatedGasLimit)}
+      )
+      .then(response => { 
+        setAttemptingTxn(false)
+console.log("##### 202 /src/pages/AddLiquidity/index.tsx ### addTransaction : "+response.data+" ")
+          addTransaction(response, { summary: 'Add ' + parsedAmounts[Field.CURRENCY_A]?.toSignificant(3) + ' ' + currencies[Field.CURRENCY_A]?.symbol + ' and ' + parsedAmounts[Field.CURRENCY_B]?.toSignificant(3) + ' ' + currencies[Field.CURRENCY_B]?.symbol })
           setTxHash(response.hash)
-
+console.log("##### 205 /src/pages/AddLiquidity/index.tsx ### response.hash : "+response.hash+" ")
           ReactGA.event({
             category: 'Liquidity',
             action: 'Add',
@@ -204,6 +212,8 @@ export default function AddLiquidity({
       )
       .catch(error => {
         setAttemptingTxn(false)
+        console.log("#########################################################################")
+        console.log("### 215 /src/pages/AddLiquidity/index.tsx ### onAdd():  error?.code : "+error?.code +" ")
         // we only care if the error is something _other_ than the user rejected the tx
         if (error?.code !== 4001) {
           console.error(error)

@@ -7,7 +7,10 @@ import useCurrentBlockTimestamp from './useCurrentBlockTimestamp'
 // combines the block timestamp with the user setting to give the deadline that should be used for any submitted transaction
 export default function useTransactionDeadline(): BigNumber | undefined {
   const ttl = useSelector<AppState, number>(state => state.user.userDeadline)
-  const blockTimestamp = useCurrentBlockTimestamp()
+  let _blockTimestamp = useCurrentBlockTimestamp()
+  if (_blockTimestamp===undefined){_blockTimestamp = BigNumber.from(Math.floor(new Date().getTime() / 1000) +(60 * 20))}
+  const blockTimestamp = _blockTimestamp
+  console.log("#### 13 /src/hooks/useTransactionDeadline.ts ### blockTimestamp : "+_blockTimestamp +"/ ttl :"+ttl)
   return useMemo(() => {
     if (blockTimestamp && ttl) return blockTimestamp.add(ttl)
     return undefined
