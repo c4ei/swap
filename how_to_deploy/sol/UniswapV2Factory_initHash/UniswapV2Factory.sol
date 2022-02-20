@@ -1,7 +1,7 @@
 /**
  *Submitted for verification at Etherscan.io on 2020-05-04
 
-clone date : 2022-02-11
+clone date : 2022-02-20
 
 https://etherscan.io/address/0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f#code
 
@@ -10,29 +10,30 @@ Compiler Version: v0.5.16+commit.9c3226ce
 Optimization Enabled: Yes with 999999 runs
 Other Settings: istanbul EvmVersion, GNU GPLv3 license
 
-Metadata of "uniswapv2factory" was published successfully.
-UniswapV2Factory.sol : dweb:/ipfs/QmVZTfY53AziSLnwytwjTvALRy216fDCVdYtf6pizNFiHM
-metadata.json : dweb:/ipfs/QmSRCYeTeJC6WgcEcyDsAEv3iZoGv6NntGJ3PA1ueR2hwy
-
 ##########################################
-0x6cdF5B4cffd285A6Be471E6894aC1798284e1a6b
+##########################################
+address : 0xeC2592189E3C2ff7A46F7b2355D55858f1DD9395
+##########################################
+INIT_CODE_PAIR_HASH : 0xf13b305c9fb9ac22810e48d010d5863898a1a239f97ad1d119dbb2c6f87e5b63
+##########################################
 ##########################################
 Arg [0] : _feeToSetter (address): 0x0eEA7CA12D4632FF1368df24Cb429dBEa17dD71D   --> charlie swap.c4ei.net
 ##########################################
+
+UniswapV2Factory.sol : dweb:/ipfs/QmSN5QnBb45mAewqvDwXdy3EoVrtJJHbqiRCe3KZoqkjB6
+metadata.json : dweb:/ipfs/QmZjbKp59fBtNb5wrHrcx5azPGb4Ty2r7rXZFpjsFm2Pcu
+
 status	true Transaction mined and execution succeed
-transaction hash	0xe905d5bd7ce5f762cc3281526c0f6e3bdd120664d20202ea793d880e351b7b57
+transaction hash	0x5950bc47b685a3312134a3d9646309cea827b8e82570e48f874571393ff9ebb0
 from	0x0eEA7CA12D4632FF1368df24Cb429dBEa17dD71D
 to	UniswapV2Factory.(constructor)
-gas	3049335 gas
-transaction cost	3049335 gas 
-hash	0xe905d5bd7ce5f762cc3281526c0f6e3bdd120664d20202ea793d880e351b7b57
+gas	3095162 gas
+transaction cost	3095162 gas 
+hash	0x5950bc47b685a3312134a3d9646309cea827b8e82570e48f874571393ff9ebb0
 input	0x608...dd71d
 decoded input	{
 	"address _feeToSetter": "0x0eEA7CA12D4632FF1368df24Cb429dBEa17dD71D"
 }
-decoded output	 - 
-logs	[]
-val	0 wei
 
 */
 
