@@ -25,3 +25,5 @@ RINKEBY
 kovan
 
 
+22-02-20 factory change
+cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/node_modules
