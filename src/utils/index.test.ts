@@ -55,12 +55,12 @@ describe('utils', () => {
     })
 
     it('returns the checksummed address', () => {
-      expect(isAddress('0x856B735047948F55BA589280CdbA96A22fC8245C')).toBe('0x856B735047948F55BA589280CdbA96A22fC8245C')
-      expect(isAddress('0x856B735047948F55BA589280CdbA96A22fC8245C')).toBe('0x856B735047948F55BA589280CdbA96A22fC8245C')
+      expect(isAddress('0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28')).toBe('0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28')
+      expect(isAddress('0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28')).toBe('0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28')
     })
 
     it('succeeds even without prefix', () => {
-      expect(isAddress('f164fc0ec4e93095b804a4795bbe1e041497b92a')).toBe('0x856B735047948F55BA589280CdbA96A22fC8245C')
+      expect(isAddress('f164fc0ec4e93095b804a4795bbe1e041497b92a')).toBe('0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28')
     })
     it('fails if too long', () => {
       expect(isAddress('f164fc0ec4e93095b804a4795bbe1e041497b92a0')).toBe(false)
@@ -73,7 +73,7 @@ describe('utils', () => {
     })
 
     it('truncates middle characters', () => {
-      expect(shortenAddress('0x856B735047948F55BA589280CdbA96A22fC8245C')).toBe('0xf164...b92a')
+      expect(shortenAddress('0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28')).toBe('0xf164...b92a')
     })
 
     it('truncates middle characters even without prefix', () => {
