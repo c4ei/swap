@@ -8,7 +8,7 @@ Compiler Version: v0.6.6+commit.6c089d02
 Optimization Enabled: Yes with 999999 runs
 Other Settings: istanbul EvmVersion, GNU GPLv3 license
 
-730����  hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // init code hash
+730����  hex'f13b305c9fb9ac22810e48d010d5863898a1a239f97ad1d119dbb2c6f87e5b63' // init code hash
 --> f13b305c9fb9ac22810e48d010d5863898a1a239f97ad1d119dbb2c6f87e5b63
 
 ##########################################
