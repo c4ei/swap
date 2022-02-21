@@ -27,6 +27,7 @@ kovan
 
 22-02-20 factory change
 cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/node_modules
+0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9-->
 0xf13b305c9fb9ac22810e48d010d5863898a1a239f97ad1d119dbb2c6f87e5b63
 
 /home/dev/www/uniswapV2/src/state/swap/hooks.ts
