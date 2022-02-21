@@ -31,3 +31,15 @@ cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/nod
 
 /home/dev/www/uniswapV2/src/state/swap/hooks.ts
 v2 router 01 0x856B735047948F55BA589280CdbA96A22fC8245C --> 0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28
+
+
+
+INIT_CODE_HASH:
+	96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f
+UniswapV2Router02 : 
+	0x22C573E6e225ed77Bda153ec0e18843EF6c0016f 
+UniswapV2Factory : 
+	0x6cdF5B4cffd285A6Be471E6894aC1798284e1a6b 
+V1_factory Vyper....
+	0xeC2592189E3C2ff7A46F7b2355D55858f1DD9395
+    

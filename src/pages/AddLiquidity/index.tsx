@@ -41,15 +41,15 @@ import { PoolPriceBar } from './PoolPriceBar'
 import { useIsTransactionUnsupported } from 'hooks/Trades'
 import UnsupportedCurrencyFooter from 'components/swap/UnsupportedCurrencyFooter'
 ////////////////////////////////////////////////////////////////////////////
-import { bytecode } from '@uniswap/v2-core/build/UniswapV2Pair.json'
-import { keccak256 } from '@ethersproject/solidity'
-const COMPUTED_INIT_CODE_HASH = keccak256(['bytes'], [`0x${bytecode}`])
-document.writeln("INIT_CODE_HASH:"+COMPUTED_INIT_CODE_HASH+"") 
-document.writeln("UniswapV2Router02 : 0x22C573E6e225ed77Bda153ec0e18843EF6c0016f") 
-document.writeln("UniswapV2Factory  : 0x6cdF5B4cffd285A6Be471E6894aC1798284e1a6b") 
+// import { bytecode } from '@uniswap/v2-core/build/UniswapV2Pair.json'
+// import { keccak256 } from '@ethersproject/solidity'
+// const COMPUTED_INIT_CODE_HASH = keccak256(['bytes'], [`0x${bytecode}`])
+// document.writeln("INIT_CODE_HASH:"+COMPUTED_INIT_CODE_HASH+"") 
+// document.writeln("UniswapV2Router02 : 0x22C573E6e225ed77Bda153ec0e18843EF6c0016f") 
+// document.writeln("UniswapV2Factory  : 0xeC2592189E3C2ff7A46F7b2355D55858f1DD9395") 
 //     //42ffe6804795e727b4765646b01aaf2dc7e13e6a002788bab6eb66e253472d5b 
 // https://etherscan.io/address/0xeC2592189E3C2ff7A46F7b2355D55858f1DD9395#code
-document.writeln("V1_factory Vyper....0xeC2592189E3C2ff7A46F7b2355D55858f1DD9395 ")
+// document.writeln("V1_factory Vyper....0xeC2592189E3C2ff7A46F7b2355D55858f1DD9395 ")
 ////////////////////////////////////////////////////////////////////////////
 export default function AddLiquidity({
   match: {
