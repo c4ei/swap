@@ -122,6 +122,9 @@ export default function Pool() {
         .filter(stakingPair => stakingPair?.liquidityToken.address === v2Pair.liquidityToken.address).length === 0
     )
   })
+// document.writeln( stakingInfosWithBalance[1].stakingRewardAddress?Pair[0].Symbol )
+// pair={stakingPair[1]}
+// stakedBalance={stakingInfosWithBalance[i].stakedAmount}
 
   return (
     <>
@@ -195,7 +198,7 @@ export default function Pool() {
               <>
                 <ButtonSecondary>
                   <RowBetween>
-                    <ExternalLink href={'https://uniswap.info/account/' + account}>
+                    <ExternalLink href={'https://swap.c4ei.net/account/' + account}>
                       Account analytics and accrued fees
                     </ExternalLink>
                     <span> ↗</span>

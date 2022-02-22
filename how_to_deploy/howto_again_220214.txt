@@ -34,7 +34,7 @@ cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/nod
 v2 router 01 0x856B735047948F55BA589280CdbA96A22fC8245C --> 0x55629f23Bb6d84145B6e5aC84bF63171f0a52C28
 
 
-
+/home/dev/www/uniswapV2/src/pages/AddLiquidity/index.tsx
 INIT_CODE_HASH:
 	96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f --> f13b305c9fb9ac22810e48d010d5863898a1a239f97ad1d119dbb2c6f87e5b63
 UniswapV2Router02 : 
@@ -50,3 +50,16 @@ const COMPUTED_INIT_CODE_HASH = keccak256(['bytes'], [`0x${bytecode}`])
 document.writeln("INIT_CODE_HASH:"+COMPUTED_INIT_CODE_HASH+"") 
 
 /home/dev/www/uniswapV2/node_modules/@uniswap/v2-core/build/UniswapV2Pair.json
+
+/home/dev/www/uniswapV2/src/utils/computeUniCirculation.ts
+const TREASURY_VESTING_GENESIS = 1600387200
+/home/dev/www/uniswapV2/src/state/stake/hooks.ts
+export const STAKING_GENESIS = 1600387200
+	Fri Sep 18 2020 09:00:00 UTC+0900 (한국 표준시)
+
+1645455600 --> 2022. 2. 22. 오전 12:00:00
+
+
+/home/dev/www/uniswapV2/src/constants/index.ts
+const UNI_C4EI_ADDRESS = '0xeBE5769Bfb761416Bb533c70d6d6013de21e46CE'
+

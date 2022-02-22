@@ -350,10 +350,10 @@ export default function Header() {
             UNI
           </StyledNavLink>
           <StyledNavLink id={`stake-nav-link`} to={'/vote'}>
-            Vote
+            {/* Vote */}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
-            Charts <span style={{ fontSize: '11px' }}>↗</span>
+          <StyledExternalLink id={`stake-nav-link`} href={'https://swap.c4ei.net'}>
+            {/* Charts <span style={{ fontSize: '11px' }}>↗</span> */}
           </StyledExternalLink>
         </HeaderLinks>
       </HeaderRow>

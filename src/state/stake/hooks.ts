@@ -7,7 +7,7 @@ import { NEVER_RELOAD, useMultipleContractSingleData } from '../multicall/hooks'
 import { tryParseAmount } from '../swap/hooks'
 import useCurrentBlockTimestamp from 'hooks/useCurrentBlockTimestamp'
 
-export const STAKING_GENESIS = 1600387200
+export const STAKING_GENESIS = 1645455600
 
 export const REWARDS_DURATION_DAYS = 60
 
@@ -69,7 +69,7 @@ export interface StakingInfo {
 // gets the staking info from the network for the active chain id
 export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
   const { chainId, account } = useActiveWeb3React()
-
+  // console.log('######### chainId:'+chainId+' / account:' +account)
   // detect if staking is ended
   const currentBlockTimestamp = useCurrentBlockTimestamp()
 

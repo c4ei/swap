@@ -31,7 +31,11 @@ export function getEtherscanLink(
   data: string,
   type: 'transaction' | 'token' | 'address' | 'block'
 ): string {
-  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
+  let _prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
+  if(_prefix === "https://c4ei.etherscan.io"){
+    _prefix ='https://exp.c4ei.net'
+  }
+  const prefix = _prefix
 
   switch (type) {
     case 'transaction': {

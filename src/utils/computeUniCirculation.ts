@@ -4,7 +4,7 @@ import { STAKING_GENESIS } from '../state/stake/hooks'
 
 const STAKING_END = STAKING_GENESIS + 60 * 60 * 24 * 60
 
-const TREASURY_VESTING_GENESIS = 1600387200
+const TREASURY_VESTING_GENESIS = 1645455600
 
 // 30 days
 const TREASURY_VESTING_CLIFF: number = 60 * 60 * 24 * 30
