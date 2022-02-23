@@ -99,3 +99,12 @@ Currency(18, 'ETH', 'Ether')  --> Currency(18, 'C4EI', 'C4EI Coin')
 /home/dev/www/uniswapV2/how_to_deploy/@uniswap/sdk/dist/sdk.esm.js.map
 
 cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/node_modules
+
+/home/dev/www/uniswapV2/src/components/CurrencyLogo/index.tsx
+--> 5 line
+import EthereumLogo from '../../assets/images/ethereum-logo.png'
+--> 51 line
+  if (currency === ETHER) {
+    return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
+  }
+/home/dev/www/uniswapV2/src/assets/images/ethereum-logo.png
