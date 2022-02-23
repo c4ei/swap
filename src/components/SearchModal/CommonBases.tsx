@@ -34,15 +34,16 @@ export default function CommonBases({
   selectedCurrency?: Currency | null
   onSelect: (currency: Currency) => void
 }) {
+  const disp_off = { display: 'none' }
   return (
     <AutoColumn gap="md">
-      <AutoRow>
+      <AutoRow style={disp_off}>
         <Text fontWeight={500} fontSize={14}>
           Common bases
         </Text>
         <QuestionHelper text="These tokens are commonly paired with other tokens." />
       </AutoRow>
-      <AutoRow gap="4px">
+      <AutoRow gap="4px" style={disp_off}>
         <BaseWrapper
           onClick={() => {
             if (!selectedCurrency || !currencyEquals(selectedCurrency, ETHER)) {

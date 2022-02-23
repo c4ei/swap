@@ -316,6 +316,7 @@ export default function Header() {
 
   const countUpValue = aggregateBalance?.toFixed(0) ?? '0'
   const countUpValuePrevious = usePrevious(countUpValue) ?? '0'
+  const disp_off = { display: 'none' }
 
   return (
     <HeaderFrame>
@@ -365,7 +366,7 @@ export default function Header() {
             )}
           </HideSmall>
           {availableClaim && !showClaimPopup && (
-            <UNIWrapper onClick={toggleClaimModal}>
+            <UNIWrapper onClick={toggleClaimModal} style={disp_off}>
               <UNIAmount active={!!account && !availableClaim} style={{ pointerEvents: 'auto' }}>
                 <TYPE.white padding="0 2px">
                   {claimTxn && !claimTxn?.receipt ? <Dots>Claiming UNI</Dots> : 'Claim UNI'}
@@ -375,7 +376,7 @@ export default function Header() {
             </UNIWrapper>
           )}
           {!availableClaim && aggregateBalance && (
-            <UNIWrapper onClick={() => setShowUniBalanceModal(true)}>
+            <UNIWrapper onClick={() => setShowUniBalanceModal(true)} style={disp_off}>
               <UNIAmount active={!!account && !availableClaim} style={{ pointerEvents: 'auto' }}>
                 {account && (
                   <HideSmall>

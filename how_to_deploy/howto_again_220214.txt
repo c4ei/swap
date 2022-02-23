@@ -114,4 +114,12 @@ import EthereumLogo from '../../assets/images/ethereum-logo.png'
 
 delete DAI , UNI
 /home/dev/www/uniswapV2/node_modules/@uniswap/default-token-list/build/uniswap-default.tokenlist.json
+cp -r /home/dev/www/uniswapV2/node_modules/@uniswap /home/dev/www/uniswapV2/how_to_deploy
 
+/home/dev/www/uniswapV2/src/components/Header/index.tsx
+0 UNI --> not show
+const disp_off = { display: 'none' }
+style={disp_off}
+/home/dev/www/uniswapV2/src/components/SearchModal/CommonBases.tsx
+Common bases --> not show
+same code : style={disp_off}
