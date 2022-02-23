@@ -347,7 +347,7 @@ export default function Header() {
             {t('pool')}
           </StyledNavLink>
           <StyledNavLink id={`stake-nav-link`} to={'/uni'}>
-            UNI
+            {/* UNI */}
           </StyledNavLink>
           <StyledNavLink id={`stake-nav-link`} to={'/vote'}>
             {/* Vote */}
@@ -403,7 +403,7 @@ export default function Header() {
           <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
             {account && userEthBalance ? (
               <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                {userEthBalance?.toSignificant(4)} ETH
+                {userEthBalance?.toSignificant(4)} C4EI
               </BalanceText>
             ) : null}
             <Web3Status />

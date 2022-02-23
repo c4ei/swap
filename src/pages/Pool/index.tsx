@@ -143,13 +143,13 @@ export default function Pool() {
                   {`Liquidity providers earn a 0.3% fee on all trades proportional to their share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.`}
                 </TYPE.white>
               </RowBetween>
-              <ExternalLink
+              {/* <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
                 target="_blank"
                 href="https://uniswap.org/docs/v2/core-concepts/pools/"
               >
                 <TYPE.white fontSize={14}>Read more about providing liquidity</TYPE.white>
-              </ExternalLink>
+              </ExternalLink> */}
             </AutoColumn>
           </CardSection>
           <CardBGImage />
@@ -165,7 +165,7 @@ export default function Pool() {
                 </TYPE.mediumHeader>
               </HideSmall>
               <ButtonRow>
-                <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/create/0x9E63f92c2D1F3826111846bAd89210293C7F4060">
+                <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/create/ETH">
                   Create a pair
                 </ResponsiveButtonSecondary>
                 <ResponsiveButtonPrimary
@@ -173,7 +173,7 @@ export default function Pool() {
                   as={Link}
                   padding="6px 8px"
                   borderRadius="12px"
-                  to="/add/C4EI"
+                  to="/add/ETH"
                 >
                   <Text fontWeight={500} fontSize={16}>
                     Add Liquidity

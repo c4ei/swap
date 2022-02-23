@@ -172,22 +172,6 @@
       "decimals": 18,
       "chainId": 42,
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xd0A1E359811322d97991E03f863a0C30C2cF029C/logo.png"
-    },
-    {
-      "name": "Uniswap",
-      "address": "0xeBE5769Bfb761416Bb533c70d6d6013de21e46CE",
-      "symbol": "UNI",
-      "decimals": 18,
-      "chainId": 21004,
-      "logoURI": "ipfs://QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg"
-    },
-    {
-      "name": "Dai Stablecoin",
-      "address": "0x6a0909C651D8F027bA4781eE319e8BB58b11F065",
-      "symbol": "DAI",
-      "decimals": 18,
-      "chainId": 21004,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xaD6D458402F60fD3Bd25163575031ACDce07538D/logo.png"
     }
   ]
 }
