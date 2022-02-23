@@ -88,3 +88,14 @@ delete
 	"chainId": 21004,
 	"logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc778417E063141139Fce010982780140Aa0cD5Ab/logo.png"
 },
+
+
+SearchModal
+Currency(18, 'ETH', 'Ether')  --> Currency(18, 'C4EI', 'C4EI Coin')
+/home/dev/www/uniswapV2/how_to_deploy/@uniswap/sdk/dist/sdk.cjs.development.js
+/home/dev/www/uniswapV2/how_to_deploy/@uniswap/sdk/dist/sdk.cjs.development.js.map
+/home/dev/www/uniswapV2/how_to_deploy/@uniswap/sdk/dist/sdk.cjs.production.min.js.map
+/home/dev/www/uniswapV2/how_to_deploy/@uniswap/sdk/dist/sdk.esm.js
+/home/dev/www/uniswapV2/how_to_deploy/@uniswap/sdk/dist/sdk.esm.js.map
+
+cp -r /home/dev/www/uniswapV2/how_to_deploy/@uniswap /home/dev/www/uniswapV2/node_modules

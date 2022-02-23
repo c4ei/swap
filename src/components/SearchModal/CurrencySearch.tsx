@@ -94,7 +94,8 @@ export function CurrencySearch({
 
   const showETH: boolean = useMemo(() => {
     const s = debouncedQuery.toLowerCase().trim()
-    return s === '' || s === 'e' || s === 'et' || s === 'eth'
+    // return s === '' || s === 'e' || s === 'et' || s === 'eth' || s === 'eth'
+    return s === '' || s === 'c' || s === 'c4' || s === 'c4e' || s === 'c4ei'
   }, [debouncedQuery])
 
   const tokenComparator = useTokenComparator(invertSearchOrder)
@@ -135,7 +136,8 @@ export function CurrencySearch({
     (e: KeyboardEvent<HTMLInputElement>) => {
       if (e.key === 'Enter') {
         const s = debouncedQuery.toLowerCase().trim()
-        if (s === 'eth') {
+        if (s === 'c4ei') {
+          // if (s === 'eth') {
           handleCurrencySelect(ETHER)
         } else if (filteredSortedTokens.length > 0) {
           if (
