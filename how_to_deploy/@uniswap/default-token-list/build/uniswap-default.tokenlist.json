@@ -174,12 +174,12 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xd0A1E359811322d97991E03f863a0C30C2cF029C/logo.png"
     },
     {
-      "name": "Wrapped Ether",
-      "address": "0x994Fd4195aF7eDC17437F5aD7Fb34ABBc0CBba89",
-      "symbol": "WETH",
+      "name": "Uniswap",
+      "address": "0xeBE5769Bfb761416Bb533c70d6d6013de21e46CE",
+      "symbol": "UNI",
       "decimals": 18,
       "chainId": 21004,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc778417E063141139Fce010982780140Aa0cD5Ab/logo.png"
+      "logoURI": "ipfs://QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg"
     },
     {
       "name": "Dai Stablecoin",

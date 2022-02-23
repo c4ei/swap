@@ -10,7 +10,7 @@ export default function useTransactionDeadline(): BigNumber | undefined {
   let _blockTimestamp = useCurrentBlockTimestamp()
   if (_blockTimestamp===undefined){_blockTimestamp = BigNumber.from(Math.floor(new Date().getTime() / 1000) +(60 * 20))}
   const blockTimestamp = _blockTimestamp
-  console.log("#### 13 /src/hooks/useTransactionDeadline.ts ### blockTimestamp : "+_blockTimestamp +"/ ttl :"+ttl)
+  // console.log("#### 13 /src/hooks/useTransactionDeadline.ts ### blockTimestamp : "+_blockTimestamp +"/ ttl :"+ttl)
   return useMemo(() => {
     if (blockTimestamp && ttl) return blockTimestamp.add(ttl)
     return undefined

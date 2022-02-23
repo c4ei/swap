@@ -63,3 +63,28 @@ export const STAKING_GENESIS = 1600387200
 /home/dev/www/uniswapV2/src/constants/index.ts
 const UNI_C4EI_ADDRESS = '0xeBE5769Bfb761416Bb533c70d6d6013de21e46CE'
 
+/home/dev/www/uniswapV2/public/locales/de.json
+
+ETH -->  C4EI
+/home/dev/www/uniswapV2/src/pages/Pool/index.tsx
+/home/dev/www/uniswapV2/src/components/NumericalInput/index.tsx
+/home/dev/www/uniswapV2/src/components/CurrencyInputPanel/index.tsx
+206          <CurrencySelect
+            selected={!!currency}
+            className="open-currency-select-button"
+
+/home/dev/www/uniswapV2/src/state/swap/hooks.ts
+/home/dev/www/uniswapV2/src/utils/currencyId.ts
+/home/dev/www/uniswapV2/src/components/SearchModal/CurrencySearch.tsx
+ETH -->  C4EI
+
+delete
+/home/dev/www/uniswapV2/node_modules/@uniswap/default-token-list/build/uniswap-default.tokenlist.json
+{
+	"name": "Wrapped Ether",
+	"address": "0x994Fd4195aF7eDC17437F5aD7Fb34ABBc0CBba89",
+	"symbol": "WETH",
+	"decimals": 18,
+	"chainId": 21004,
+	"logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc778417E063141139Fce010982780140Aa0cD5Ab/logo.png"
+},

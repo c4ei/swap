@@ -165,7 +165,7 @@ export default function Pool() {
                 </TYPE.mediumHeader>
               </HideSmall>
               <ButtonRow>
-                <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/create/ETH">
+                <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/create/0x9E63f92c2D1F3826111846bAd89210293C7F4060">
                   Create a pair
                 </ResponsiveButtonSecondary>
                 <ResponsiveButtonPrimary
@@ -173,7 +173,7 @@ export default function Pool() {
                   as={Link}
                   padding="6px 8px"
                   borderRadius="12px"
-                  to="/add/ETH"
+                  to="/add/C4EI"
                 >
                   <Text fontWeight={500} fontSize={16}>
                     Add Liquidity
