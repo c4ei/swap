@@ -347,6 +347,9 @@ export default function Header() {
           >
             {t('pool')}
           </StyledNavLink>
+          <StyledExternalLink id={`stake-nav-link`} href={'https://farm.c4ei.net'}>
+            Farm
+          </StyledExternalLink>
           <StyledNavLink id={`stake-nav-link`} to={'/uni'}>
             {/* UNI */}
           </StyledNavLink>
