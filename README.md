@@ -7,7 +7,7 @@
 An open source interface for Uniswap -- a protocol for decentralized exchange of Ethereum tokens.
 
 - Website: [uniswap.org](https://uniswap.org/)
-- Interface: [app.uniswap.org](https://app.uniswap.org)
+- Interface: [swap.c4ei.net](https://swap.c4ei.net)
 - Docs: [uniswap.org/docs/](https://uniswap.org/docs/)
 - Twitter: [@UniswapProtocol](https://twitter.com/UniswapProtocol)
 - Reddit: [/r/Uniswap](https://www.reddit.com/r/Uniswap/)
@@ -19,7 +19,7 @@ An open source interface for Uniswap -- a protocol for decentralized exchange of
 
 To access the Uniswap Interface, use an IPFS gateway link from the
 [latest release](https://github.com/Uniswap/uniswap-interface/releases/latest), 
-or visit [app.uniswap.org](https://app.uniswap.org).
+or visit [swap.c4ei.net](https://swap.c4ei.net).
 
 ## Listing a token
 
