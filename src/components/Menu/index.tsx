@@ -112,7 +112,7 @@ export default function Menu() {
           </MenuItem>
           <MenuItem id="link" href="https://farm.c4ei.net/">
             <PieChart size={14} />
-            Analytics
+            Farm
           </MenuItem>
           {/* 
           <MenuItem id="link" href="https://uniswap.org/docs/v2">

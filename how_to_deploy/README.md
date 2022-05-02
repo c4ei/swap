@@ -417,3 +417,11 @@ python3 find_init_code_hash.py
 Failed to get claim data
 Failed to load staking rewards info
 No liquidity found.
+
+
+in docker
+/app# rm -R *
+
+docker cp /home/dev/www/uniswapV2/build swap.c4ei.net:/app/
+
+
